@@ -135,8 +135,20 @@
       linear-gradient(160deg, rgba(28,31,34,0.86), rgba(47,58,68,0.72)),
       repeating-linear-gradient(135deg, #3a4550 0px, #3a4550 2px, #333d47 2px, #333d47 40px);
     padding:5rem 0 4.5rem;
+    overflow:hidden;
+  }
+  .hero-bg-photo{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0.28;
+    z-index:0;
   }
   .hero-inner{
+    position:relative;
+    z-index:1;
     max-width:var(--maxw);
     margin:0 auto;
     padding:0 1.25rem;
@@ -252,6 +264,13 @@
     height:4px;
     background:var(--brick);
   }
+  .service-photo{
+    width:calc(100% + 3.2rem);
+    margin:-2rem -1.6rem 1.2rem;
+    height:170px;
+    object-fit:cover;
+    border-bottom:1px solid var(--line);
+  }
   .service-icon{
     width:48px; height:48px;
     margin-bottom:1rem;
@@ -300,6 +319,14 @@
     color:var(--gold);
     margin-top:3px;
   }
+  .about-photo{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:var(--radius);
+    margin-bottom:1.5rem;
+    border:1px solid #444c54;
+  }
   .about-card{
     background:var(--charcoal);
     border:1px solid #444c54;
@@ -319,6 +346,19 @@
 
   /* Social proof */
   .proof{background:var(--cream);}
+  .gallery-strip{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:1rem;
+    margin-bottom:2.5rem;
+  }
+  .gallery-strip img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:var(--radius);
+    border:1px solid var(--line);
+  }
   .review-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
@@ -494,6 +534,7 @@
 <main id="main">
 
   <section class="hero" id="top">
+    <img class="hero-bg-photo" src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="New home construction framing in progress" loading="eager">
     <div class="hero-inner">
       <div class="badge-row">
         <span class="badge"><span class="stars">★★★★★</span> 5.0 from 42 reviews</span>
@@ -517,6 +558,7 @@
       </div>
       <div class="service-grid">
         <div class="service-card">
+          <img class="service-photo" src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="New home construction site">
           <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
             <path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>
           </svg>
@@ -524,6 +566,7 @@
           <p>Custom-built homes designed and constructed around how you actually live — built to last generations, not just years.</p>
         </div>
         <div class="service-card">
+          <img class="service-photo" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="Remodeled modern kitchen interior">
           <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
             <path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/><path d="M14 3v6h6"/>
           </svg>
@@ -531,6 +574,7 @@
           <p>Kitchens, baths, additions, and whole-home renovations that upgrade both the function and feel of your space.</p>
         </div>
         <div class="service-card">
+          <img class="service-photo" src="https://images.unsplash.com/photo-1626885930974-4b69aa21bbf9?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="General contractor reviewing blueprints on site">
           <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
             <path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 2z"/>
           </svg>
@@ -547,6 +591,7 @@
         <div>
           <span class="eyebrow">Locally Rooted</span>
           <h2>Building In Shelby, For Shelby</h2>
+          <img class="about-photo" src="https://images.unsplash.com/photo-1652303518379-c0ef1c9fb2b1?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="Apex Contracting Group crew working on a home build">
           <p>Apex Contracting Group is a community-focused general contractor serving homeowners throughout Shelby, Ohio and the surrounding area. We're not a national franchise passing through — we live where we build, and our reputation depends on getting it right.</p>
           <p>Our approach is simple: real craftsmanship, clear communication, and long-term relationships built one project at a time.</p>
           <ul class="about-points">
@@ -579,6 +624,9 @@
         <span class="eyebrow">Social Proof</span>
         <h2>A Perfect 5-Star Rating</h2>
         <p>Apex Contracting Group has earned a 5.0 out of 5 rating across 42 reviews from homeowners in Shelby, OH and the surrounding communities.</p>
+      </div>
+      <div class="gallery-strip">
+        <img src="https://images.unsplash.com/photo-1614127938540-a1139bee1841?fm=jpg&q=60&w=3000&auto=format&fit=crop" alt="Completed home remodeling project">
       </div>
       <div class="review-grid">
         <div class="review-card">
