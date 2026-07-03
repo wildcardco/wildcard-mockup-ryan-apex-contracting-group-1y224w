@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Contracting Group | New Home Construction &amp; Remodeling in Shelby, OH</title>
+<meta name="description" content="Apex Contracting Group is the top-rated general contractor in Shelby, OH — 5 stars from 42 reviews. New home construction, remodeling, and full-service contracting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --charcoal: #1c1f22;
+    --steel: #2f3a44;
+    --brick: #b0492f;
+    --brick-dark: #8f3a25;
+    --cream: #f6f3ee;
+    --paper: #ffffff;
+    --line: #e2ddd3;
+    --gold: #c99a4a;
+    --radius: 10px;
+    --maxw: 1180px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Lato', sans-serif;
+    color:var(--charcoal);
+    background:var(--cream);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Merriweather', serif;
+    line-height:1.25;
+    margin:0 0 0.6em;
+    color:var(--charcoal);
+  }
+  p{margin:0 0 1em;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 1.25rem;
+  }
+  .skip-link{
+    position:absolute;
+    left:-999px;
+    top:auto;
+    background:var(--brick);
+    color:#fff;
+    padding:0.75rem 1.25rem;
+    z-index:1000;
+    border-radius:0 0 8px 0;
+  }
+  .skip-link:focus{left:0;top:0;}
+
+  /* Header */
+  header.site{
+    background:var(--charcoal);
+    color:#f2efe9;
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:3px solid var(--brick);
+  }
+  .nav-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0.9rem 1.25rem;
+    max-width:var(--maxw);
+    margin:0 auto;
+    gap:1rem;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:0.65rem;
+    font-family:'Merriweather', serif;
+    font-weight:700;
+    font-size:1.15rem;
+    color:#fff;
+    text-decoration:none;
+    letter-spacing:0.02em;
+  }
+  .brand svg{flex-shrink:0;}
+  nav.primary ul{
+    list-style:none;
+    display:flex;
+    gap:1.75rem;
+    margin:0;
+    padding:0;
+  }
+  nav.primary a{
+    color:#e4e0d8;
+    text-decoration:none;
+    font-weight:700;
+    font-size:0.95rem;
+    letter-spacing:0.02em;
+    padding:0.35rem 0;
+    border-bottom:2px solid transparent;
+    transition:border-color 0.2s, color 0.2s;
+  }
+  nav.primary a:hover, nav.primary a:focus{
+    border-color:var(--brick);
+    color:#fff;
+  }
+  .nav-cta{
+    background:var(--brick);
+    color:#fff !important;
+    padding:0.55rem 1.1rem !important;
+    border-radius:6px;
+    border:none !important;
+  }
+  .nav-cta:hover{background:var(--brick-dark);}
+  .menu-toggle{
+    display:none;
+    background:none;
+    border:2px solid #6b6259;
+    color:#fff;
+    padding:0.4rem 0.6rem;
+    border-radius:6px;
+    font-size:1.1rem;
+    cursor:pointer;
+  }
+
+  /* Hero */
+  .hero{
+    position:relative;
+    color:#fff;
+    background:
+      linear-gradient(160deg, rgba(28,31,34,0.86), rgba(47,58,68,0.72)),
+      repeating-linear-gradient(135deg, #3a4550 0px, #3a4550 2px, #333d47 2px, #333d47 40px);
+    padding:5rem 0 4.5rem;
+  }
+  .hero-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 1.25rem;
+    display:flex;
+    flex-direction:column;
+    gap:1.5rem;
+  }
+  .badge-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.6rem;
+    align-items:center;
+  }
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    gap:0.4rem;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.25);
+    padding:0.35rem 0.8rem;
+    border-radius:999px;
+    font-size:0.85rem;
+    font-weight:700;
+    letter-spacing:0.02em;
+  }
+  .stars{color:var(--gold); letter-spacing:2px;}
+  .hero h1{
+    font-size:clamp(2.1rem, 5vw, 3.4rem);
+    color:#fff;
+    max-width:20ch;
+  }
+  .hero .lede{
+    font-size:1.15rem;
+    max-width:56ch;
+    color:#e9e5dd;
+  }
+  .hero-ctas{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.9rem;
+    margin-top:0.5rem;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    padding:0.85rem 1.6rem;
+    border-radius:6px;
+    font-weight:700;
+    text-decoration:none;
+    font-size:1rem;
+    border:2px solid transparent;
+    transition:transform 0.15s ease, background 0.2s, color 0.2s, border-color 0.2s;
+    cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{
+    background:var(--brick);
+    color:#fff;
+  }
+  .btn-primary:hover{background:var(--brick-dark);}
+  .btn-outline{
+    background:transparent;
+    color:#fff;
+    border-color:#fff;
+  }
+  .btn-outline:hover{
+    background:#fff;
+    color:var(--charcoal);
+  }
+
+  /* Sections generic */
+  section{
+    padding:4.5rem 0;
+  }
+  .section-head{
+    max-width:60ch;
+    margin-bottom:2.5rem;
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:0.8rem;
+    font-weight:700;
+    color:var(--brick);
+    margin-bottom:0.6rem;
+    display:block;
+  }
+  .section-head h2{
+    font-size:clamp(1.7rem, 3.2vw, 2.3rem);
+  }
+
+  /* Services */
+  .services{background:var(--paper);}
+  .service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:1.5rem;
+  }
+  .service-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:2rem 1.6rem;
+    position:relative;
+    overflow:hidden;
+  }
+  .service-card::before{
+    content:"";
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:4px;
+    background:var(--brick);
+  }
+  .service-icon{
+    width:48px; height:48px;
+    margin-bottom:1rem;
+    color:var(--brick);
+  }
+  .service-card h3{
+    font-size:1.2rem;
+    margin-bottom:0.5rem;
+  }
+  .service-card p{
+    color:#4a4741;
+    font-size:0.98rem;
+    margin-bottom:0;
+  }
+
+  /* About */
+  .about{
+    background:var(--steel);
+    color:#eee9df;
+  }
+  .about .eyebrow{color:var(--gold);}
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:3rem;
+    align-items:center;
+  }
+  .about h2{color:#fff;}
+  .about p{color:#d6d1c6;}
+  .about-points{
+    list-style:none;
+    margin:1.5rem 0 0;
+    padding:0;
+    display:grid;
+    gap:0.9rem;
+  }
+  .about-points li{
+    display:flex;
+    gap:0.7rem;
+    align-items:flex-start;
+    font-weight:700;
+    color:#f2efe9;
+  }
+  .about-points svg{
+    flex-shrink:0;
+    color:var(--gold);
+    margin-top:3px;
+  }
+  .about-card{
+    background:var(--charcoal);
+    border:1px solid #444c54;
+    border-radius:var(--radius);
+    padding:2.2rem;
+    text-align:center;
+  }
+  .about-card .big{
+    font-family:'Merriweather', serif;
+    font-size:3rem;
+    color:var(--gold);
+    font-weight:900;
+    line-height:1;
+  }
+  .about-card .stars{font-size:1.4rem;}
+  .about-card p{color:#cfc9bd; margin-top:0.7rem;}
+
+  /* Social proof */
+  .proof{background:var(--cream);}
+  .review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:1.5rem;
+  }
+  .review-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:1.8rem;
+  }
+  .review-card .stars{display:block; margin-bottom:0.7rem; font-size:1.1rem;}
+  .review-card p{
+    font-style:italic;
+    color:#3c3a35;
+  }
+  .review-card .who{
+    font-style:normal;
+    font-weight:700;
+    color:var(--brick);
+    display:block;
+    margin-top:0.6rem;
+  }
+  .proof-note{
+    text-align:center;
+    margin-top:2rem;
+    font-size:0.95rem;
+    color:#5b574f;
+  }
+
+  /* Contact */
+  .contact{
+    background:var(--paper);
+  }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:2.5rem;
+  }
+  .contact-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:2.2rem;
+  }
+  .contact-card h3{margin-bottom:1.2rem;}
+  .contact-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:1.1rem;
+  }
+  .contact-list li{
+    display:flex;
+    gap:0.9rem;
+    align-items:flex-start;
+  }
+  .contact-list svg{
+    flex-shrink:0;
+    color:var(--brick);
+    margin-top:2px;
+  }
+  .contact-list a{
+    color:var(--charcoal);
+    text-decoration:none;
+    font-weight:700;
+  }
+  .contact-list a:hover{color:var(--brick);}
+  .cta-panel{
+    background:var(--charcoal);
+    color:#fff;
+    border-radius:var(--radius);
+    padding:2.2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:1rem;
+  }
+  .cta-panel h3{color:#fff;}
+  .cta-panel p{color:#d7d2c8;}
+  .cta-panel .btn-primary{align-self:flex-start;}
+
+  /* Footer */
+  footer.site{
+    background:var(--charcoal);
+    color:#c9c4b9;
+    padding:2.5rem 0 1.5rem;
+    font-size:0.9rem;
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:1rem;
+    align-items:center;
+    border-bottom:1px solid #3a4048;
+    padding-bottom:1.5rem;
+    margin-bottom:1.2rem;
+  }
+  .footer-brand{
+    font-family:'Merriweather', serif;
+    color:#fff;
+    font-weight:700;
+  }
+  footer.site a{color:#e4e0d8; text-decoration:none;}
+  footer.site a:hover{color:var(--gold);}
+  .footer-bottom{
+    text-align:center;
+    color:#8b8577;
+  }
+  .footer-bottom .wildcard{
+    color:#6f695c;
+  }
+
+  @media (max-width: 860px){
+    nav.primary{
+      position:fixed;
+      inset:0 0 0 auto;
+      height:100vh;
+      width:min(78vw, 320px);
+      background:var(--charcoal);
+      transform:translateX(100%);
+      transition:transform 0.25s ease;
+      padding:5rem 1.5rem 2rem;
+      z-index:99;
+    }
+    nav.primary.open{transform:translateX(0);}
+    nav.primary ul{
+      flex-direction:column;
+      gap:0.5rem;
+    }
+    nav.primary a{
+      display:block;
+      padding:0.7rem 0.2rem;
+    }
+    .menu-toggle{display:inline-flex;}
+    .about-grid, .contact-grid{
+      grid-template-columns:1fr;
+    }
+  }
+  @media (max-width:480px){
+    .hero{padding:3.5rem 0 3rem;}
+    section{padding:3.2rem 0;}
+  }
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<header class="site">
+  <div class="nav-row">
+    <a href="#top" class="brand">
+      <svg width="32" height="32" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M24 4 L44 20 V44 H4 V20 Z" fill="#b0492f"/>
+        <path d="M24 4 L44 20 H4 Z" fill="#c99a4a"/>
+        <rect x="19" y="27" width="10" height="17" fill="#1c1f22"/>
+      </svg>
+      Apex Contracting Group
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" id="menuBtn">☰</button>
+    <nav class="primary" id="primaryNav" aria-label="Primary">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="badge-row">
+        <span class="badge"><span class="stars">★★★★★</span> 5.0 from 42 reviews</span>
+        <span class="badge">Shelby, OH &amp; Surrounding Areas</span>
+      </div>
+      <h1>Where Quality Reaches Its Peak</h1>
+      <p class="lede">Apex Contracting Group is the top choice for residential new home construction and remodeling in Shelby, Ohio — trusted by homeowners for honest craftsmanship and builds that last.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary">Start Your Project</a>
+        <a href="tel:14192956034" class="btn btn-outline">Call (419) 295-6034</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What We Do</span>
+        <h2>Full-Service Residential Contracting</h2>
+        <p>From the ground up to room-by-room renovations, Apex Contracting Group handles every phase of your build with the same commitment to quality craftsmanship.</p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>
+          </svg>
+          <h3>New Home Construction</h3>
+          <p>Custom-built homes designed and constructed around how you actually live — built to last generations, not just years.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/><path d="M14 3v6h6"/>
+          </svg>
+          <h3>Home Remodeling</h3>
+          <p>Kitchens, baths, additions, and whole-home renovations that upgrade both the function and feel of your space.</p>
+        </div>
+        <div class="service-card">
+          <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+            <path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 14.4l-4.8 2.5.9-5.4-3.9-3.8 5.4-.8L12 2z"/>
+          </svg>
+          <h3>General Contracting</h3>
+          <p>One point of contact managing your whole project — scheduling, trades, and quality control from start to finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div>
+          <span class="eyebrow">Locally Rooted</span>
+          <h2>Building In Shelby, For Shelby</h2>
+          <p>Apex Contracting Group is a community-focused general contractor serving homeowners throughout Shelby, Ohio and the surrounding area. We're not a national franchise passing through — we live where we build, and our reputation depends on getting it right.</p>
+          <p>Our approach is simple: real craftsmanship, clear communication, and long-term relationships built one project at a time.</p>
+          <ul class="about-points">
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Residential new construction &amp; remodeling specialists
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Quality craftsmanship on every job, large or small
+            </li>
+            <li>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Local, community-focused &amp; accountable
+            </li>
+          </ul>
+        </div>
+        <div class="about-card">
+          <div class="big">5.0</div>
+          <div class="stars">★★★★★</div>
+          <p>Average rating from 42 verified reviews from Shelby-area homeowners.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Social Proof</span>
+        <h2>A Perfect 5-Star Rating</h2>
+        <p>Apex Contracting Group has earned a 5.0 out of 5 rating across 42 reviews from homeowners in Shelby, OH and the surrounding communities.</p>
+      </div>
+      <div class="review-grid">
+        <div class="review-card">
+          <span class="stars">★★★★★</span>
+          <p>"A perfect 5.0-star rating built on 42 reviews from real homeowners across Shelby and the surrounding area."</p>
+          <span class="who">— Verified Google Reviews</span>
+        </div>
+      </div>
+      <p class="proof-note">Detailed testimonials available upon request — call or visit us to hear directly from past clients.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Get Started</span>
+        <h2>Let's Talk About Your Project</h2>
+        <p>Whether you're planning a new home build or a full remodel, reach out to Apex Contracting Group to get started.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Contact Details</h3>
+          <ul class="contact-list">
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0122 16.92z"/></svg>
+              <span><a href="tel:14192956034">(419) 295-6034</a></span>
+            </li>
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>114 W Main St<br>Shelby, OH 44875</span>
+            </li>
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              <span>Serving Shelby, OH &amp; surrounding areas</span>
+            </li>
+          </ul>
+        </div>
+        <div class="cta-panel">
+          <h3>Ready to Build or Remodel?</h3>
+          <p>Get in touch with Apex Contracting Group today and take the first step toward your new home or renovation project.</p>
+          <a href="tel:14192956034" class="btn btn-primary">Call (419) 295-6034</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-inner">
+      <span class="footer-brand">Apex Contracting Group</span>
+      <span>114 W Main St, Shelby, OH 44875 · <a href="tel:14192956034">(419) 295-6034</a></span>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Apex Contracting Group. All rights reserved.</p>
+      <p class="wildcard">Website sample by Wild Card Creative Co</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('primaryNav');
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+</body>
+</html>
